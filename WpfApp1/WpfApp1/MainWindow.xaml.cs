@@ -66,8 +66,8 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (button.Content == "спасибо зеленый стрелощка") seconds = 6;
-            else seconds = 13;
+            if (button.Content == "спасибо зеленый стрелощка" && seconds > 6) seconds = 6;
+            else if (button.Content == "прапусти красный крестик") seconds = 13;
             timer.Start();
         }
     }
